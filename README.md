@@ -37,9 +37,13 @@ npm run dev
 4. Obtendrás un enlace propio, por ejemplo `expresion-escrita.vercel.app`.
 5. Copia ese enlace y pídele a Claude que actualice la tarjeta de este curso en tu vitrina **Ficha Cursos** (moverla de "Próximamente" a "Disponible").
 
-## Próximos pasos posibles
+## Actividades prácticas
 
-Este curso todavía no tiene actividades prácticas descargables en PDF (como sí tiene APA 7). Si quieres agregarlas más adelante, dile a Claude "agreguemos la actividad práctica del Módulo X de Expresión Escrita" y seguimos el mismo patrón que usamos en APA 7.
+Las 6 actividades prácticas del curso ya están completas — una por módulo, cada una completable en línea (con guardado automático) y descargable como PDF desde `public/actividad-practica-modulo1.pdf` a `public/actividad-practica-modulo6.pdf`.
+
+El ejercicio de tipo `"source-compare"` ahora admite mostrar solo un texto fuente sin necesidad de una "versión del estudiante" para comparar (útil para ejercicios de comprensión lectora y resumen) — simplemente omite la propiedad `studentVersion` en la definición del ejercicio.
+
+## Próximos pasos posibles
 
 ## Autora
 

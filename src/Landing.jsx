@@ -11,6 +11,7 @@ import {
   Lock,
   CheckCircle2,
   ArrowRight,
+  PenSquare,
 } from "lucide-react";
 
 /* ============================================================ */
@@ -101,7 +102,7 @@ export default function Landing({ onUnlock }) {
         <div className="ld-grid-4">
           <div className="ld-feature">
             <FileText size={20} strokeWidth={2} />
-            <span>30 lecciones de lectura clara y directa</span>
+            <span>36 lecciones de lectura, práctica y video</span>
           </div>
           <div className="ld-feature">
             <PlayCircle size={20} strokeWidth={2} />
@@ -114,6 +115,10 @@ export default function Landing({ onUnlock }) {
           <div className="ld-feature">
             <ListChecks size={20} strokeWidth={2} />
             <span>Listas de chequeo para tus propios textos</span>
+          </div>
+          <div className="ld-feature">
+            <PenSquare size={20} strokeWidth={2} />
+            <span>Actividades prácticas, en línea o para descargar</span>
           </div>
           <div className="ld-feature">
             <CheckCircle2 size={20} strokeWidth={2} />
