@@ -43,6 +43,14 @@ Las 6 actividades prácticas del curso ya están completas — una por módulo, 
 
 El ejercicio de tipo `"source-compare"` ahora admite mostrar solo un texto fuente sin necesidad de una "versión del estudiante" para comparar (útil para ejercicios de comprensión lectora y resumen) — simplemente omite la propiedad `studentVersion` en la definición del ejercicio.
 
+### Retroalimentación: cómo sabe el estudiante si acertó
+
+Cada ejercicio de `"choice-items"` puede llevar, en cada ítem, una propiedad `correct` (el índice de la opción correcta, empezando en 0) y una `explanation` (el porqué). Cuando ambas están presentes, aparece un botón **"Revisar mis respuestas"** que resalta en verde la opción correcta y en rojo la que el estudiante marcó si se equivocó, mostrando la explicación debajo. El botón "Intentar de nuevo" reinicia el ejercicio.
+
+Cada pregunta dentro de `"prompts"` o `"source-compare"` puede llevar una propiedad `sample` (una respuesta modelo). Cuando está presente, aparece un botón **"Ver respuesta modelo"** individual debajo de esa pregunta, para que el estudiante compare su propia redacción — sin marcarla como correcta o incorrecta, porque este tipo de ejercicio no tiene una única respuesta válida.
+
+Si agregas una actividad práctica nueva, procura incluir `correct`/`explanation` en los ejercicios de elección y `sample` en las preguntas abiertas — de lo contrario, esos ejercicios se mostrarán sin retroalimentación.
+
 ## Próximos pasos posibles
 
 ## Autora

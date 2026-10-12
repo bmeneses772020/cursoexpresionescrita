@@ -145,10 +145,10 @@ const COURSE = {
                 "Lee cada oración y marca si es clara o poco clara. Justifica tu respuesta en una frase corta.",
               choiceLabels: ["Claro", "Poco claro"],
               items: [
-                { id: "a", text: "\u201cEl fenómeno en cuestión, que ha sido objeto de numerosos estudios a lo largo de las últimas décadas, presenta una serie de características que merecen ser analizadas.\u201d" },
-                { id: "b", text: "\u201cEste estudio analiza tres características del fenómeno.\u201d" },
-                { id: "c", text: "\u201cDebido a la existencia de múltiples factores que inciden de manera diversa sobre el resultado final del proceso, resulta complejo determinar con precisión absoluta cuál de ellos es el más relevante.\u201d" },
-                { id: "d", text: "\u201cVarios factores influyen en el resultado; el más importante es la motivación.\u201d" },
+                { id: "a", text: "\u201cEl fenómeno en cuestión, que ha sido objeto de numerosos estudios a lo largo de las últimas décadas, presenta una serie de características que merecen ser analizadas.\u201d", correct: 1, explanation: "Da muchas vueltas antes de decir algo concreto; se puede simplificar sin perder sentido." },
+                { id: "b", text: "\u201cEste estudio analiza tres características del fenómeno.\u201d", correct: 0, explanation: "Va directo a la idea, sin rodeos ni palabras de más." },
+                { id: "c", text: "\u201cDebido a la existencia de múltiples factores que inciden de manera diversa sobre el resultado final del proceso, resulta complejo determinar con precisión absoluta cuál de ellos es el más relevante.\u201d", correct: 1, explanation: "Es una oración larga y abstracta que puede decirse de forma mucho más directa." },
+                { id: "d", text: "\u201cVarios factores influyen en el resultado; el más importante es la motivación.\u201d", correct: 0, explanation: "Es breve, concreta y va directo a la idea principal." },
               ],
             },
             {
@@ -162,11 +162,13 @@ const COURSE = {
                   id: "r1",
                   label:
                     "Fuente:\n\u201cEn relación con la temática abordada en el presente documento, cabe destacar que la misma reviste una importancia significativa desde el punto de vista académico.\u201d\n\nTu versión clara y concisa:",
+                  sample: "Este tema es importante para la investigación académica.",
                 },
                 {
                   id: "r2",
                   label:
                     "Fuente:\n\u201cEs menester señalar que, en la mayoría de los casos, suele ocurrir que los estudiantes que no logran comprender adecuadamente el material de lectura tienden a presentar, por lo general, un rendimiento académico que podría considerarse inferior al esperado.\u201d\n\nTu versión clara y concisa:",
+                  sample: "Los estudiantes que no comprenden bien lo que leen suelen obtener peores resultados académicos.",
                 },
               ],
             },
@@ -176,8 +178,8 @@ const COURSE = {
               title: "Tu reflexión",
               instruction: "Responde en tus propias palabras.",
               prompts: [
-                { id: "q1", label: "¿Por qué la claridad no es lo mismo que la simplicidad?" },
-                { id: "q2", label: "Piensa en un texto tuyo reciente: ¿qué harías distinto aplicando el principio de concisión?" },
+                { id: "q1", label: "¿Por qué la claridad no es lo mismo que la simplicidad?", sample: "La claridad significa que el lector entiende la idea sin esfuerzo, mientras que la simplicidad se refiere a usar palabras o estructuras sencillas; un texto simple puede seguir siendo confuso si está mal organizado, y un texto claro puede usar vocabulario técnico si lo explica bien." },
+                { id: "q2", label: "Piensa en un texto tuyo reciente: ¿qué harías distinto aplicando el principio de concisión?", sample: "Eliminaría las repeticiones y las frases de relleno como 'cabe destacar que', e iría directo a la idea principal desde la primera oración." },
               ],
             },
           ],
@@ -299,10 +301,10 @@ const COURSE = {
                 "Lee cada descripción de un párrafo y marca si está bien estructurado o necesita revisión. Justifica tu respuesta en una frase corta.",
               choiceLabels: ["Bien estructurado", "Necesita revisión"],
               items: [
-                { id: "a", text: "Un párrafo que empieza hablando de los beneficios del ejercicio, sigue con una anécdota sobre política, y termina con una cita sobre nutrición." },
-                { id: "b", text: "Un párrafo que presenta una idea en la primera oración y la desarrolla con dos ejemplos concretos en las siguientes." },
-                { id: "c", text: "Un párrafo de una sola oración muy larga que intenta cubrir tres temas distintos separados por comas." },
-                { id: "d", text: "Un párrafo de cien palabras que desarrolla una sola idea con un ejemplo y cierra conectando con el siguiente párrafo." },
+                { id: "a", text: "Un párrafo que empieza hablando de los beneficios del ejercicio, sigue con una anécdota sobre política, y termina con una cita sobre nutrición.", correct: 1, explanation: "Mezcla varias ideas sin relación entre sí; cada una debería ir en su propio párrafo." },
+                { id: "b", text: "Un párrafo que presenta una idea en la primera oración y la desarrolla con dos ejemplos concretos en las siguientes.", correct: 0, explanation: "Tiene oración temática y desarrollo claro: está bien estructurado." },
+                { id: "c", text: "Un párrafo de una sola oración muy larga que intenta cubrir tres temas distintos separados por comas.", correct: 1, explanation: "Cubre varios temas sin separarlos en distintos párrafos; necesita dividirse." },
+                { id: "d", text: "Un párrafo de cien palabras que desarrolla una sola idea con un ejemplo y cierra conectando con el siguiente párrafo.", correct: 0, explanation: "Desarrolla una sola idea, con ejemplo y cierre: es un párrafo bien construido." },
               ],
             },
             {
@@ -312,10 +314,10 @@ const COURSE = {
               instruction: "Lee cada oración y marca qué relación señala el conector destacado.",
               choiceLabels: ["Contraste", "Suma", "Conclusión", "Ejemplo"],
               items: [
-                { id: "a", text: "\u201cEl texto es breve; sin embargo, aborda el tema con profundidad.\u201d" },
-                { id: "b", text: "\u201cEl autor citó varias fuentes. Además, incluyó su propio análisis.\u201d" },
-                { id: "c", text: "\u201cTodos los datos apuntan en la misma dirección; por lo tanto, la conclusión es clara.\u201d" },
-                { id: "d", text: "\u201cAlgunos conectores señalan contraste, por ejemplo, \u2018sin embargo\u2019 o \u2018no obstante\u2019.\u201d" },
+                { id: "a", text: "\u201cEl texto es breve; sin embargo, aborda el tema con profundidad.\u201d", correct: 0, explanation: "'Sin embargo' introduce una idea que contrasta con la anterior." },
+                { id: "b", text: "\u201cEl autor citó varias fuentes. Además, incluyó su propio análisis.\u201d", correct: 1, explanation: "'Además' agrega una idea nueva que suma a la anterior." },
+                { id: "c", text: "\u201cTodos los datos apuntan en la misma dirección; por lo tanto, la conclusión es clara.\u201d", correct: 2, explanation: "'Por lo tanto' introduce una conclusión derivada de lo anterior." },
+                { id: "d", text: "\u201cAlgunos conectores señalan contraste, por ejemplo, \u2018sin embargo\u2019 o \u2018no obstante\u2019.\u201d", correct: 3, explanation: "'Por ejemplo' introduce una ilustración concreta de la idea general." },
               ],
             },
             {
@@ -324,9 +326,9 @@ const COURSE = {
               title: "Aplica la estructura a tu propio párrafo",
               instruction: "Escribe un párrafo completo, pieza por pieza, sobre un tema de tu carrera.",
               prompts: [
-                { id: "tematica", label: "Escribe una oración temática para un párrafo sobre un tema de tu carrera." },
-                { id: "desarrollo", label: "Escribe dos oraciones de desarrollo que expliquen o ejemplifiquen esa idea." },
-                { id: "cierre", label: "Escribe una oración de cierre que conecte con una idea siguiente." },
+                { id: "tematica", label: "Escribe una oración temática para un párrafo sobre un tema de tu carrera.", sample: "La gestión del tiempo es una de las habilidades más determinantes para el rendimiento académico universitario." },
+                { id: "desarrollo", label: "Escribe dos oraciones de desarrollo que expliquen o ejemplifiquen esa idea.", sample: "Los estudiantes que planifican sus semanas con anticipación logran distribuir mejor sus horas de estudio entre varias materias. Además, evitan la acumulación de tareas que suele generar estrés antes de los exámenes." },
+                { id: "cierre", label: "Escribe una oración de cierre que conecte con una idea siguiente.", sample: "Por esta razón, aprender a organizar el tiempo desde el primer semestre resulta clave para sostener un buen desempeño a lo largo de toda la carrera." },
               ],
             },
           ],
@@ -443,11 +445,11 @@ const COURSE = {
                 "Lee cada oración y marca si es correcta o incorrecta según lo visto en este módulo. Justifica tu respuesta en una frase corta.",
               choiceLabels: ["Correcto", "Incorrecto"],
               items: [
-                { id: "a", text: "\u201cLos estudiantes que asistieron a la conferencia, presentaron sus conclusiones.\u201d" },
-                { id: "b", text: "\u201cEl grupo de investigadores publicó sus hallazgos en una revista internacional.\u201d" },
-                { id: "c", text: "\u201cPienso de que deberíamos revisar el informe antes de entregarlo.\u201d" },
-                { id: "d", text: "\u201cEl proyecto consiste en tres etapas principales.\u201d" },
-                { id: "e", text: "\u201cUna decisión difícil requiere de mucho análisis previo.\u201d" },
+                { id: "a", text: "\u201cLos estudiantes que asistieron a la conferencia, presentaron sus conclusiones.\u201d", correct: 1, explanation: "Tiene una coma entre el sujeto ('los estudiantes...') y el verbo ('presentaron'), que nunca debe llevar coma." },
+                { id: "b", text: "\u201cEl grupo de investigadores publicó sus hallazgos en una revista internacional.\u201d", correct: 0, explanation: "El sujeto 'el grupo' es singular y concuerda correctamente con 'publicó'." },
+                { id: "c", text: "\u201cPienso de que deberíamos revisar el informe antes de entregarlo.\u201d", correct: 1, explanation: "Es un dequeísmo: sobra el 'de' antes de 'que'; lo correcto es 'pienso que'." },
+                { id: "d", text: "\u201cEl proyecto consiste en tres etapas principales.\u201d", correct: 0, explanation: "El régimen correcto del verbo 'consistir' es 'consiste en'." },
+                { id: "e", text: "\u201cUna decisión difícil requiere de mucho análisis previo.\u201d", correct: 1, explanation: "El verbo 'requerir' no lleva 'de'; lo correcto es 'requiere mucho análisis'." },
               ],
             },
             {
@@ -456,9 +458,9 @@ const COURSE = {
               title: "Corrige estas oraciones",
               instruction: "Reescribe cada oración corrigiendo el error de puntuación, concordancia o régimen.",
               prompts: [
-                { id: "c1", label: "Corrige: \u201cLos resultados que obtuvimos, coinciden con investigaciones previas.\u201d" },
-                { id: "c2", label: "Corrige: \u201cMe acuerdo que el plazo vence el viernes.\u201d" },
-                { id: "c3", label: "Corrige: \u201cLa influencia de los medios influye sobre la opinión pública.\u201d" },
+                { id: "c1", label: "Corrige: \u201cLos resultados que obtuvimos, coinciden con investigaciones previas.\u201d", sample: "Los resultados que obtuvimos coinciden con investigaciones previas." },
+                { id: "c2", label: "Corrige: \u201cMe acuerdo que el plazo vence el viernes.\u201d", sample: "Me acuerdo de que el plazo vence el viernes." },
+                { id: "c3", label: "Corrige: \u201cLa influencia de los medios influye sobre la opinión pública.\u201d", sample: "Los medios influyen en la opinión pública." },
               ],
             },
             {
@@ -467,7 +469,7 @@ const COURSE = {
               title: "Revisa tu propio texto",
               instruction: "Aplica lo aprendido a un texto tuyo real.",
               prompts: [
-                { id: "revision", label: "Revisa un párrafo tuyo: ¿encuentras algún dequeísmo, queísmo, o coma mal puesta entre sujeto y verbo? Descríbelo aquí." },
+                { id: "revision", label: "Revisa un párrafo tuyo: ¿encuentras algún dequeísmo, queísmo, o coma mal puesta entre sujeto y verbo? Descríbelo aquí.", sample: "Por ejemplo: encontré una coma de más entre el sujeto 'los resultados' y el verbo 'mostraron'; la quité y la oración quedó más clara." },
               ],
             },
           ],
@@ -598,8 +600,8 @@ const COURSE = {
                 meta: "Fragmento de un artículo divulgativo sobre hábitos de estudio.",
               },
               prompts: [
-                { id: "idea", label: "¿Cuál es la idea principal de este párrafo? Escríbela en una sola oración, con tus propias palabras." },
-                { id: "inferencia", label: "Formula una inferencia razonable a partir del texto (recuerda: debe apoyarse en evidencia textual, no en una opinión sin fundamento)." },
+                { id: "idea", label: "¿Cuál es la idea principal de este párrafo? Escríbela en una sola oración, con tus propias palabras.", sample: "Dormir menos de seis horas afecta negativamente el rendimiento académico, incluso si se estudia más tiempo." },
+                { id: "inferencia", label: "Formula una inferencia razonable a partir del texto (recuerda: debe apoyarse en evidencia textual, no en una opinión sin fundamento).", sample: "Se puede inferir que la calidad del descanso es al menos tan importante como la cantidad de horas dedicadas a estudiar, ya que el sueño insuficiente limita la capacidad de consolidar lo aprendido." },
               ],
             },
             {
@@ -609,10 +611,10 @@ const COURSE = {
               instruction: "Imagina que cada afirmación proviene de un mismo texto. Marca si es la idea principal o un detalle secundario.",
               choiceLabels: ["Idea principal", "Detalle secundario"],
               items: [
-                { id: "a", text: "\u201cEl estudio comparó 200 estudiantes de tres universidades distintas.\u201d" },
-                { id: "b", text: "\u201cLa motivación intrínseca predice mejor el rendimiento académico que la motivación extrínseca.\u201d" },
-                { id: "c", text: "\u201cLos datos se recolectaron durante el segundo semestre de 2024.\u201d" },
-                { id: "d", text: "\u201cEl hallazgo central del estudio es que el acompañamiento docente reduce la deserción universitaria.\u201d" },
+                { id: "a", text: "\u201cEl estudio comparó 200 estudiantes de tres universidades distintas.\u201d", correct: 1, explanation: "Es un dato metodológico que respalda el estudio, no la idea central." },
+                { id: "b", text: "\u201cLa motivación intrínseca predice mejor el rendimiento académico que la motivación extrínseca.\u201d", correct: 0, explanation: "Es la afirmación central que el texto sostiene y desarrolla." },
+                { id: "c", text: "\u201cLos datos se recolectaron durante el segundo semestre de 2024.\u201d", correct: 1, explanation: "Es un detalle metodológico sobre cuándo se hizo el estudio, no la idea principal." },
+                { id: "d", text: "\u201cEl hallazgo central del estudio es que el acompañamiento docente reduce la deserción universitaria.\u201d", correct: 0, explanation: "El propio texto lo señala como el hallazgo central: es la idea principal." },
               ],
             },
             {
@@ -621,8 +623,8 @@ const COURSE = {
               title: "Practica con tu propia lectura",
               instruction: "Aplica estas estrategias a un texto real de tu carrera.",
               prompts: [
-                { id: "propia_idea", label: "Elige un texto que estés leyendo actualmente para tu carrera. Escribe su idea principal en una oración." },
-                { id: "propia_pregunta", label: "Escribe una pregunta que te hayas hecho antes de empezar a leerlo (o que te habría servido hacerte)." },
+                { id: "propia_idea", label: "Elige un texto que estés leyendo actualmente para tu carrera. Escribe su idea principal en una oración.", sample: "Por ejemplo, en un artículo sobre metodología cualitativa: 'La triangulación de fuentes aumenta la validez de los hallazgos en estudios cualitativos.'" },
+                { id: "propia_pregunta", label: "Escribe una pregunta que te hayas hecho antes de empezar a leerlo (o que te habría servido hacerte).", sample: "Por ejemplo: '¿Qué diferencia hay entre validez y confiabilidad en este contexto?'" },
               ],
             },
           ],
@@ -748,8 +750,8 @@ const COURSE = {
                 meta: "Fragmento de un texto divulgativo sobre comunicación.",
               },
               prompts: [
-                { id: "resumen", label: "Resume la idea principal en una sola oración, con tus propias palabras (no copies frases del original)." },
-                { id: "generalizacion", label: "En el texto se mencionan varios elementos de comunicación no verbal (gestos, expresiones faciales, postura, tono de voz). Generalízalos en un solo término, como viste en la lección." },
+                { id: "resumen", label: "Resume la idea principal en una sola oración, con tus propias palabras (no copies frases del original).", sample: "La comunicación no verbal (gestos, expresiones, postura, tono) complementa o incluso contradice el mensaje verbal, y las personas suelen confiar más en ella cuando hay contradicción." },
+                { id: "generalizacion", label: "En el texto se mencionan varios elementos de comunicación no verbal (gestos, expresiones faciales, postura, tono de voz). Generalízalos en un solo término, como viste en la lección.", sample: "Todos esos elementos pueden agruparse bajo el término 'lenguaje corporal' o 'señales no verbales'." },
               ],
             },
             {
@@ -759,10 +761,10 @@ const COURSE = {
               instruction: "Lee cada descripción y marca si describe un resumen aceptable o solo un recorte del original.",
               choiceLabels: ["Resumen aceptable", "Es solo un recorte"],
               items: [
-                { id: "a", text: "Alguien resumió un texto de 300 palabras copiando las mismas tres oraciones textuales del original, una tras otra." },
-                { id: "b", text: "Alguien resumió un texto reformulando la idea central con sus propias palabras, en una oración." },
-                { id: "c", text: "Alguien \u201cresumió\u201d un artículo repitiendo el primer párrafo completo, sin cambiar nada." },
-                { id: "d", text: "Alguien condensó tres párrafos del original en una sola oración propia que capta la idea común." },
+                { id: "a", text: "Alguien resumió un texto de 300 palabras copiando las mismas tres oraciones textuales del original, una tras otra.", correct: 1, explanation: "Copiar oraciones textuales, aunque sean pocas, es un recorte, no un resumen." },
+                { id: "b", text: "Alguien resumió un texto reformulando la idea central con sus propias palabras, en una oración.", correct: 0, explanation: "Reformular con palabras propias es exactamente lo que define un resumen aceptable." },
+                { id: "c", text: "Alguien \u201cresumió\u201d un artículo repitiendo el primer párrafo completo, sin cambiar nada.", correct: 1, explanation: "Repetir un párrafo sin cambios no reduce ni reformula nada: es un recorte." },
+                { id: "d", text: "Alguien condensó tres párrafos del original en una sola oración propia que capta la idea común.", correct: 0, explanation: "Condensar varias ideas en una síntesis propia es justamente la función de un resumen." },
               ],
             },
             {
@@ -771,8 +773,8 @@ const COURSE = {
               title: "Practica la síntesis",
               instruction: "Piensa en dos fuentes reales que hayas leído sobre un mismo tema para tu carrera.",
               prompts: [
-                { id: "coincide", label: "¿En qué coinciden esas dos fuentes?" },
-                { id: "difiere", label: "¿En qué se diferencian o se complementan esas dos fuentes?" },
+                { id: "coincide", label: "¿En qué coinciden esas dos fuentes?", sample: "Por ejemplo: ambas fuentes coinciden en que la retroalimentación oportuna mejora el aprendizaje." },
+                { id: "difiere", label: "¿En qué se diferencian o se complementan esas dos fuentes?", sample: "Por ejemplo: una fuente se enfoca en educación presencial y la otra en entornos virtuales, así que se complementan al mostrar el mismo fenómeno en contextos distintos." },
               ],
             },
           ],
@@ -909,11 +911,11 @@ const COURSE = {
                 "Lee cada acción sobre un texto y marca si corresponde a la etapa de revisión (contenido) o de edición (forma).",
               choiceLabels: ["Es revisión (contenido)", "Es edición (forma)"],
               items: [
-                { id: "a", text: "Reorganizar el orden de los párrafos para que la argumentación fluya mejor." },
-                { id: "b", text: "Corregir una coma mal puesta entre el sujeto y el verbo." },
-                { id: "c", text: "Agregar un ejemplo que faltaba para respaldar una idea." },
-                { id: "d", text: "Cambiar una palabra repetida por un sinónimo." },
-                { id: "e", text: "Eliminar un párrafo porque repite una idea ya explicada antes." },
+                { id: "a", text: "Reorganizar el orden de los párrafos para que la argumentación fluya mejor.", correct: 0, explanation: "Cambiar el orden afecta la estructura y el contenido: es revisión." },
+                { id: "b", text: "Corregir una coma mal puesta entre el sujeto y el verbo.", correct: 1, explanation: "Es un ajuste de puntuación, no de contenido: es edición." },
+                { id: "c", text: "Agregar un ejemplo que faltaba para respaldar una idea.", correct: 0, explanation: "Agregar contenido nuevo que faltaba es parte de la revisión." },
+                { id: "d", text: "Cambiar una palabra repetida por un sinónimo.", correct: 1, explanation: "Es un ajuste de estilo en la superficie del texto: es edición." },
+                { id: "e", text: "Eliminar un párrafo porque repite una idea ya explicada antes.", correct: 0, explanation: "Decidir qué contenido sobra es parte de la revisión, no de la edición." },
               ],
             },
             {
@@ -922,8 +924,8 @@ const COURSE = {
               title: "Aplica la checklist de autoedición",
               instruction: "Trabaja con un texto propio real, aplicando lo aprendido en este módulo.",
               prompts: [
-                { id: "confuso", label: "Lee en voz alta un párrafo tuyo. ¿Encontraste alguna oración confusa o demasiado larga? Escríbela aquí y reescríbela más clara." },
-                { id: "concordancia", label: "Revisa la concordancia de un párrafo tuyo. ¿Encontraste algún error? Descríbelo." },
+                { id: "confuso", label: "Lee en voz alta un párrafo tuyo. ¿Encontraste alguna oración confusa o demasiado larga? Escríbela aquí y reescríbela más clara.", sample: "Por ejemplo: 'La investigación, que se realizó durante seis meses con la participación de estudiantes de distintas carreras, buscaba identificar patrones' es muy larga; se puede dividir en dos oraciones más claras." },
+                { id: "concordancia", label: "Revisa la concordancia de un párrafo tuyo. ¿Encontraste algún error? Descríbelo.", sample: "Por ejemplo: encontré 'los datos fue analizado' en vez de 'los datos fueron analizados'; corregí la concordancia de número." },
               ],
             },
             {
@@ -932,8 +934,8 @@ const COURSE = {
               title: "Cierre del curso",
               instruction: "Responde en tus propias palabras, mirando los seis módulos en conjunto.",
               prompts: [
-                { id: "aplicar", label: "De los seis módulos de este curso, ¿cuál técnica vas a aplicar primero en tu próximo trabajo escrito?" },
-                { id: "revision_final", label: "Elige un texto tuyo real y dale una primera revisión completa usando lo aprendido. ¿Qué cambiarías?" },
+                { id: "aplicar", label: "De los seis módulos de este curso, ¿cuál técnica vas a aplicar primero en tu próximo trabajo escrito?", sample: "Por ejemplo: voy a aplicar primero la técnica de leer en voz alta antes de entregar cualquier trabajo escrito." },
+                { id: "revision_final", label: "Elige un texto tuyo real y dale una primera revisión completa usando lo aprendido. ¿Qué cambiarías?", sample: "Por ejemplo: al revisar mi ensayo, noté que el segundo párrafo mezclaba dos ideas distintas y lo dividí en dos párrafos separados." },
               ],
             },
           ],
@@ -1416,40 +1418,7 @@ function PracticaLesson({ lesson, values, onChange }) {
           </div>
           <p className="fa-practica-instruction">{ex.instruction}</p>
 
-          {ex.kind === "choice-items" &&
-            ex.items.map((item) => {
-              const choiceKey = `${ex.id}-${item.id}-choice`;
-              const justifKey = `${ex.id}-${item.id}-justif`;
-              const choice = values[choiceKey];
-              const labels = ex.choiceLabels || ["Sí", "No"];
-              return (
-                <div className="fa-practica-item" key={item.id}>
-                  <p className="fa-practica-item-text">{item.text}</p>
-                  <div className="fa-practica-choices">
-                    {labels.map((label, li) => {
-                      const val = String(li);
-                      return (
-                        <button
-                          key={val}
-                          type="button"
-                          className={`fa-practica-choice${choice === val ? " is-selected" : ""}`}
-                          onClick={() => onChange(choiceKey, choice === val ? "" : val)}
-                        >
-                          {label}
-                        </button>
-                      );
-                    })}
-                  </div>
-                  <textarea
-                    className="fa-practica-textarea"
-                    placeholder="Justifica tu respuesta en una frase corta…"
-                    rows={2}
-                    value={values[justifKey] || ""}
-                    onChange={(e) => onChange(justifKey, e.target.value)}
-                  />
-                </div>
-              );
-            })}
+          {ex.kind === "choice-items" && <ChoiceItemsBlock ex={ex} values={values} onChange={onChange} />}
 
           {ex.kind === "source-compare" && (
             <>
@@ -1465,33 +1434,133 @@ function PracticaLesson({ lesson, values, onChange }) {
                 </div>
               )}
               {ex.prompts.map((p) => (
-                <div className="fa-practica-prompt" key={p.id}>
-                  <label className="fa-practica-prompt-label">{p.label}</label>
-                  <textarea
-                    className="fa-practica-textarea"
-                    rows={3}
-                    value={values[`${ex.id}-${p.id}`] || ""}
-                    onChange={(e) => onChange(`${ex.id}-${p.id}`, e.target.value)}
-                  />
-                </div>
+                <PromptField key={p.id} exId={ex.id} p={p} values={values} onChange={onChange} />
               ))}
             </>
           )}
 
           {ex.kind === "prompts" &&
             ex.prompts.map((p) => (
-              <div className="fa-practica-prompt" key={p.id}>
-                <label className="fa-practica-prompt-label">{p.label}</label>
-                <textarea
-                  className="fa-practica-textarea"
-                  rows={3}
-                  value={values[`${ex.id}-${p.id}`] || ""}
-                  onChange={(e) => onChange(`${ex.id}-${p.id}`, e.target.value)}
-                />
-              </div>
+              <PromptField key={p.id} exId={ex.id} p={p} values={values} onChange={onChange} />
             ))}
         </div>
       ))}
+    </div>
+  );
+}
+
+function ChoiceItemsBlock({ ex, values, onChange }) {
+  const [revealed, setRevealed] = useState(false);
+  const labels = ex.choiceLabels || ["Sí", "No"];
+  const allAnswered = ex.items.every((item) => values[`${ex.id}-${item.id}-choice`] !== undefined && values[`${ex.id}-${item.id}-choice`] !== "");
+
+  const retry = () => {
+    setRevealed(false);
+    ex.items.forEach((item) => {
+      onChange(`${ex.id}-${item.id}-choice`, "");
+    });
+  };
+
+  return (
+    <>
+      {ex.items.map((item) => {
+        const choiceKey = `${ex.id}-${item.id}-choice`;
+        const justifKey = `${ex.id}-${item.id}-justif`;
+        const choice = values[choiceKey];
+        const hasCorrect = typeof item.correct === "number";
+        return (
+          <div className="fa-practica-item" key={item.id}>
+            <p className="fa-practica-item-text">{item.text}</p>
+            <div className="fa-practica-choices">
+              {labels.map((label, li) => {
+                const val = String(li);
+                let stateClass = "";
+                if (revealed && hasCorrect) {
+                  if (li === item.correct) stateClass = " is-correct";
+                  else if (choice === val) stateClass = " is-wrong";
+                } else if (choice === val) {
+                  stateClass = " is-selected";
+                }
+                return (
+                  <button
+                    key={val}
+                    type="button"
+                    disabled={revealed}
+                    className={`fa-practica-choice${stateClass}`}
+                    onClick={() => onChange(choiceKey, choice === val ? "" : val)}
+                  >
+                    {label}
+                  </button>
+                );
+              })}
+            </div>
+            <textarea
+              className="fa-practica-textarea"
+              placeholder="Justifica tu respuesta en una frase corta…"
+              rows={2}
+              value={values[justifKey] || ""}
+              onChange={(e) => onChange(justifKey, e.target.value)}
+            />
+            {revealed && item.explanation && (
+              <p className="fa-practica-feedback">
+                {choice !== "" && Number(choice) === item.correct ? "Correcto. " : "No es correcto. "}
+                {item.explanation}
+              </p>
+            )}
+          </div>
+        );
+      })}
+
+      {!revealed ? (
+        <button
+          type="button"
+          className="fa-btn-secondary fa-practica-check-btn"
+          disabled={!allAnswered}
+          onClick={() => setRevealed(true)}
+        >
+          <CheckCircle2 size={14} strokeWidth={2} />
+          Revisar mis respuestas
+        </button>
+      ) : (
+        <button type="button" className="fa-btn-secondary fa-practica-check-btn" onClick={retry}>
+          <RotateCcw size={14} strokeWidth={2} />
+          Intentar de nuevo
+        </button>
+      )}
+    </>
+  );
+}
+
+function PromptField({ exId, p, values, onChange }) {
+  const [showSample, setShowSample] = useState(false);
+  const key = `${exId}-${p.id}`;
+
+  return (
+    <div className="fa-practica-prompt">
+      <label className="fa-practica-prompt-label">{p.label}</label>
+      <textarea
+        className="fa-practica-textarea"
+        rows={3}
+        value={values[key] || ""}
+        onChange={(e) => onChange(key, e.target.value)}
+      />
+      {p.sample && (
+        <>
+          <button
+            type="button"
+            className="fa-practica-sample-btn"
+            onClick={() => setShowSample((v) => !v)}
+          >
+            {showSample ? "Ocultar respuesta modelo" : "Ver respuesta modelo"}
+          </button>
+          {showSample && (
+            <div className="fa-practica-sample">
+              <span className="fa-practica-sample-label">Respuesta modelo</span>
+              <p>{p.sample}</p>
+            </div>
+          )}
+        </>
+      )}
     </div>
   );
 }
@@ -1995,6 +2064,28 @@ function Fonts() {
         display: block; font-size: 12.5px; font-weight: 600; color: var(--ink); margin-bottom: 6px;
         white-space: pre-line; line-height: 1.5;
       }
+
+      .fa-practica-choice.is-correct { border-color: var(--sage); background: rgba(79,122,93,0.14); color: var(--ink); }
+      .fa-practica-choice.is-wrong { border-color: var(--wine); background: rgba(122,46,59,0.12); color: var(--wine); }
+      .fa-practica-choice:disabled { cursor: default; }
+      .fa-practica-feedback {
+        margin: 8px 0 0 0; font-size: 12px; color: var(--text-soft); line-height: 1.5;
+      }
+      .fa-practica-check-btn { margin: 4px 0 22px 34px; }
+
+      .fa-practica-sample-btn {
+        margin-top: 8px; background: none; border: none; color: var(--wine);
+        font-size: 12px; font-weight: 600; cursor: pointer; padding: 0; text-decoration: underline;
+      }
+      .fa-practica-sample {
+        margin-top: 8px; background: rgba(79,122,93,0.08); border: 1px solid var(--line);
+        border-radius: 6px; padding: 10px 12px;
+      }
+      .fa-practica-sample-label {
+        display: block; font-family: 'IBM Plex Mono', monospace; font-size: 9px; font-weight: 700;
+        letter-spacing: 0.8px; text-transform: uppercase; color: var(--sage); margin-bottom: 5px;
+      }
+      .fa-practica-sample p { margin: 0; font-size: 13px; color: var(--text); line-height: 1.5; font-style: italic; }
 
       /* ---- Quiz ---- */
       .fa-quiz-q { margin-bottom: 22px; }
